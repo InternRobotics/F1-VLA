@@ -1,0 +1,136 @@
+dataset:
+  train_dir:
+    # ========== libero ==========
+    libero_spatial_no_noops:
+      path: ${LIBERO_SPATIAL_NO_NOOPS_PATH}
+      camera_keys: 
+        - observation.images.image
+        - observation.images.wrist_image
+      state_keys: 
+        - observation.state
+      action_keys:
+        - action
+      predict_img_keys:
+        - observation.images.image
+      type: libero
+      weight: 5
+      n_obs_img_steps: 12
+      n_pred_img_steps: 3
+      obs_img_stride: 3
+      num_indices: 20
+      norm_method: mean_std
+
+  image_size:
+    height: 224
+    width: 224
+  world_model_suffix: history
+  transforms:
+    consistent_random_crop_stages:
+      - stage1_pretrain_wm
+      - stage2_pretrain_vla
+      - stage3_finetune_vla
+
+exp:
+  stage: stage3_finetune_vla
+  load_ckpt: ${STAGE2_CKPT_PATH}
+
+  training_args:
+    output_dir: outputs/debug
+    run_name: debug
+    do_train: True
+    do_eval: False
+    num_train_epochs: 50
+    num_eval_episodes: 2000
+    per_device_train_batch_size: 16
+    per_device_eval_batch_size: 16
+
+    learning_rate: !!float 5e-5
+    weight_decay: !!float 1e-10
+    adam_beta1: 0.9
+    adam_beta2: 0.95
+    adam_epsilon: !!float 1e-8
+    lr_scheduler_type: cosine
+    gradient_accumulation_steps: 1
+
+    max_steps: 100_000
+    warmup_steps: 2000
+    log_level: info
+
+    seed: 42
+    bf16: False
+    logging_strategy: steps
+    logging_steps: 200
+    save_strategy: steps
+    save_steps: 10_000
+    eval_strategy: "no"
+    eval_steps: 1_00
+    eval_accumulation_steps: 1
+    save_safetensors: True
+    include_for_metrics: 
+      - loss
+
+    save_total_limit: 800
+    overwrite_output_dir: True
+    dataloader_num_workers: 12
+    dataloader_pin_memory: False
+    dataloader_persistent_workers: True
+    dataloader_prefetch_factor: 4
+    remove_unused_columns: False
+    resume_from_checkpoint: null
+
+    label_names: 
+      - action
+    metric_for_best_model: "eval_loss"
+    greater_is_better: True
+
+    report_to: 
+      - tensorboard
+
+    torch_compile: True
+
+    gen_out_loss_ratio: 0.1
+    freeze_vision_encoder: False
+    freeze_gen_expert: False
+    train_act_expert_only: False
+    train_gen_expert_only: False
+    train_state_proj: True
+
+    image_transforms_enabled: True
+    image_transforms_type:
+      - brightness
+      - contrast
+      - saturation
+      - random_crop
+      - random_rotation
+    image_transforms_max_num_transforms: 3
+    image_transforms_random_order: True
+
+    und_expert_lr: !!float 5e-5
+    act_expert_lr: !!float 5e-5
+    vision_encoder_lr: !!float 2.5e-5
+    gen_expert_lr: !!float 5e-5
+
+  max_eval_samples: 5000
+
+policy:
+  model_name: f1
+  path: ${LEROBOT_PI0_PATH}
+  ckpt_path: f1_vla/config/f1_config.json
+  language_tokenizer_path: ${PALIGEMMA_PATH}
+  mwm_pretrained_path: null
+  chunk_size: 4
+
+  use_world_model: True
+  pn: "1_2_3_4_5_6_8_10_13_16"
+  vae_ckpt: ${VAE_PATH}
+
+  temporal_conv_kernel_size: 4
+  temporal_conv_stride: 4
+  vocab_size: 4096
+  vae_dim: 32
+  num_resolutions: 4
+
+  resize_imgs_with_padding: (224, 224)
+  attention_implementation: eager
+
+
