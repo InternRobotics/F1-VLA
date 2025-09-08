@@ -93,7 +93,6 @@ conda activate f1_vla
 
 # Install dependencies
 pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 torchcodec==0.2.1 --index-url https://download.pytorch.org/whl/cu124
-pip install -r requirements.txt
 
 # install f1_vla
 pip install -e .
@@ -155,7 +154,7 @@ If you use this work in your research, please cite our paper:
   title={F1: A Vision Language Action Model Bridging Understanding and Generation to Actions},
   author={Qi Lv and Weijie Kong and Hao Li and Jia Zeng and Zherui Qiu and Delin Qu and Haoming Song and Qizhi Chen and Xiang Deng and Jiangmiao Pang},
   year={2025},
-  url={arxivx}
+  url={arxiv}
 }
 ```
 
