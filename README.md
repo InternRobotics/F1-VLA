@@ -1,12 +1,12 @@
 <div align="center">
 
-# <img src="assets/logo.png" alt="F1 Logo" width="70" height="45">: A Vision Language Action Model Bridging<br>Understanding and Generation to Actions
+# <img src="assets/logo.png" alt="F1 Logo" width="70" height="45">: A Vision-Language-Action Model Bridging<br>Understanding and Generation to Actions
 
 </div>
 
 <div align="center">
 
-[![Paper](https://img.shields.io/badge/Paper-arXiv-red.svg)](https://arxiv.org/abs/xxxx.xxxxx)
+[![Paper](https://img.shields.io/badge/Paper-arXiv-red.svg)](https://arxiv.org/abs/2509.06951)
 [![Website](https://img.shields.io/badge/Website-GitHub%20Pages-blue.svg)](https://aopolin-lv.github.io/F1-VLA)
 [![Demo](https://img.shields.io/badge/Demo-YouTube-red.svg)](https://www.youtube.com/watch?v=wz-fOJU3FEM)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -112,7 +112,7 @@ By using these two tools, the time of loading the video dataset is greatly accel
 |**Name**| **link**|
 |:--|:--|
 |LIBERO_SPATIAL_NO_NOOPS_PATH|[IPEC-COMMUNITY/libero_spatial_no_noops_1.0.0_lerobot](https://huggingface.co/datasets/IPEC-COMMUNITY/libero_spatial_no_noops_1.0.0_lerobot)|
-|STAGE2_CKPT_PATH||
+|STAGE2_CKPT_PATH|[F1_pretrain](https://huggingface.co/InternRobotics/F1-VLA)|
 |LEROBOT_PI0_PATH|[lerobot/pi0](https://huggingface.co/lerobot/pi0)|
 |PALIGEMMA_PATH|[google/paligemma-3b-pt-224](https://huggingface.co/google/paligemma-3b-pt-224)|
 |VAE_PATH|[var_d16.pth](https://huggingface.co/FoundationVision/var/resolve/main/var_d16.pth)|
@@ -151,10 +151,12 @@ If you use this work in your research, please cite our paper:
 
 ```bibtex
 @article{f1_vla_2025,
-  title={F1: A Vision Language Action Model Bridging Understanding and Generation to Actions},
-  author={Qi Lv and Weijie Kong and Hao Li and Jia Zeng and Zherui Qiu and Delin Qu and Haoming Song and Qizhi Chen and Xiang Deng and Jiangmiao Pang},
+  title={F1: A Vision-Language-Action Model Bridging Understanding and Generation to Actions},
+  author={Qi Lv and Weijie Kong and Hao Li and Jia Zeng and Zherui Qiu and Delin Qu and Haoming Song and Qizhi Chen and Xiang Deng and Michael Yu Wang and Liqiang Nie and Jiangmiao Pang},
+  eprint={2509.06951},
+  archivePrefix={arXiv},
   year={2025},
-  url={arxiv}
+  url={https://arxiv.org/abs/2509.06951}
 }
 ```
 
