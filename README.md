@@ -115,7 +115,7 @@ By using these two tools, the time of loading the video dataset is greatly accel
 |STAGE2_CKPT_PATH|[F1_pretrain](https://huggingface.co/InternRobotics/F1-VLA)|
 |LEROBOT_PI0_PATH|[lerobot/pi0](https://huggingface.co/lerobot/pi0)|
 |PALIGEMMA_PATH|[google/paligemma-3b-pt-224](https://huggingface.co/google/paligemma-3b-pt-224)|
-|VAE_PATH|[var_d16.pth](https://huggingface.co/FoundationVision/var/resolve/main/var_d16.pth)|
+|VAE_PATH|[vae_ch160v4096z32.pth](https://huggingface.co/FoundationVision/var/blob/2fc3ff144f97ddd12207727b60dd6b997bc4cb69/vae_ch160v4096z32.pth)|
 
 ### **Basic Usage**
 ```shell
