@@ -83,12 +83,12 @@ We introduce $\mathcal{F}_1$, a novel paradigm by integrating **visual foresight
 ### **Installation**
 ```bash
 # Clone repository
-git clone https://github.com/aopolin-lv/F1-VLA.git
+git clone https://github.com/InternRobotics/F1-VLA.git
 export VLA_HOME=$(pwd)
 cd F1-VLA/f1_vla
 
 # Create environment
-conda create -f f1_vla python==3.10
+conda create -n f1_vla python==3.10
 conda activate f1_vla
 
 # Install dependencies
