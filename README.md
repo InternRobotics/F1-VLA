@@ -113,7 +113,7 @@ By using these two tools, the time of loading the video dataset is greatly accel
 |:--|:--|
 |LIBERO_SPATIAL_NO_NOOPS_PATH|[IPEC-COMMUNITY/libero_spatial_no_noops_1.0.0_lerobot](https://huggingface.co/datasets/IPEC-COMMUNITY/libero_spatial_no_noops_1.0.0_lerobot)|
 |STAGE2_CKPT_PATH|[F1_pretrain](https://huggingface.co/InternRobotics/F1-VLA)|
-|LEROBOT_PI0_PATH|[lerobot/pi0](https://huggingface.co/lerobot/pi0)|
+|LEROBOT_PI0_PATH|[lerobot/pi0_base](https://huggingface.co/lerobot/pi0_base)|
 |PALIGEMMA_PATH|[google/paligemma-3b-pt-224](https://huggingface.co/google/paligemma-3b-pt-224)|
 |VAE_PATH|[vae_ch160v4096z32.pth](https://huggingface.co/FoundationVision/var/blob/2fc3ff144f97ddd12207727b60dd6b997bc4cb69/vae_ch160v4096z32.pth)|
 
