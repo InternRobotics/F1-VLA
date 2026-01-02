@@ -150,14 +150,11 @@ python train_hf.py --config-file f1_vla/config/debug_test.yaml
 If you use this work in your research, please cite our paper:
 
 ```bibtex
-@misc{lv2025f1visionlanguageactionmodelbridging,
-      title={F1: A Vision-Language-Action Model Bridging Understanding and Generation to Actions}, 
-      author={Qi Lv and Weijie Kong and Hao Li and Jia Zeng and Zherui Qiu and Delin Qu and Haoming Song and Qizhi Chen and Xiang Deng and Jiangmiao Pang},
-      year={2025},
-      eprint={2509.06951},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2509.06951}, 
+@article{lv2025f1,
+  title={F1: A vision-language-action model bridging understanding and generation to actions},
+  author={Lv, Qi and Kong, Weijie and Li, Hao and Zeng, Jia and Qiu, Zherui and Qu, Delin and Song, Haoming and Chen, Qizhi and Deng, Xiang and Pang, Jiangmiao},
+  journal={arXiv preprint arXiv:2509.06951},
+  year={2025}
 }
 ```
 
